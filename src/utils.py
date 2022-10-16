@@ -51,7 +51,6 @@ def LOF(pathnor, pathab):
     f1_score = 2 * (recall * precision) / (recall + precision)
 
     print(f"recall : {recall}\nprecision : {precision}\nf1 score : {f1_score}")
-
     return res
 
 
