@@ -14,7 +14,6 @@ def LOF_algorithm(data_input, k, distance_metric="cityblock", p=5):
     dist_matrix = squareform(distances)
     distance_df = pd.DataFrame(dist_matrix)
 
-    k = k if distance_metric == "cityblock" else k
     observations = distance_df.columns
     lrd_dict = {}
     n_dist_index = {}
