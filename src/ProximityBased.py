@@ -7,6 +7,32 @@ from scipy.spatial.distance import pdist, squareform
 
 
 
+
+
+
+'''
+    Density-based Method
+'''
+def distance_based(data, r, pi):
+  val = np.zeros(len(data))
+
+  for point in range(len(data)):
+    count = 0
+    check = True
+    for ano in data:
+      if np.linalg.norm(data[point] - ano) <= r:
+        count += 1
+        if count >= int(len(data) * pi):
+          check = False
+          break
+    
+    if check:
+      val[point] = 1
+  
+  return np.where(val==1)
+
+
+
 '''
     Density-based Method
 '''
